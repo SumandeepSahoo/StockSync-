@@ -1,0 +1,52 @@
+/* Chart Container */
+.chart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+/* Card Styling */
+.chart-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%;
+  max-width: 1000px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chart-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgb(112, 168, 231);
+}
+
+/* Title Styling */
+.chart-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Chart Wrapper */
+.chart-wrapper {
+  width: 100%;
+  height: 300px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .chart-card {
+    max-width: 95%;
+    padding: 15px;
+  }
+  .chart-title {
+    font-size: 1.3rem;
+  }
+}
