@@ -1,12 +1,98 @@
-# React + Vite
+# 📈 StockSync
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**StockSync** is a full-stack web application that leverages machine learning to analyze stock market trends, visualize key indicators, and predict future stock movements using LSTM-based deep learning models.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- 📊 Visualize stock trends (returns, volume, EMA, PSAR)
+- 🔁 Analyze feature correlations and confusion matrix
+- 🧠 Train LSTM model for directional prediction (Up/Down)
+- 📉 Track model accuracy/loss across epochs
+- 📈 Predict future trends and display R² Score
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🧩 Tech Stack
+
+### Frontend
+- **React.js** – Interactive UI
+- **Recharts** & **Heatmap-Grid** – Visualizations
+
+### Backend
+- **Flask** – API server
+- **Pandas**, **NumPy**, **scikit-learn** – Data processing
+- **TensorFlow / Keras** – LSTM model
+- **yFinance** – Fetching historical stock data
+
+---
+
+## 📂 Project Structure
+
+StockSync/
+│
+├── frontend/                # React App
+│   ├── components/
+│   ├── AnalysisCharts.jsx
+│   └── ...
+│
+├── backend/                 # Flask Server
+│   ├── app.py
+│   ├── analysis_module.py
+│   └── ...
+│
+└── README.md
+
+
+---
+
+## 📌 How It Works
+
+1. User enters stock symbol and date range.
+2. Data is fetched using **yFinance**.
+3. Technical indicators like EMA and PSAR are calculated.
+4. LSTM model is trained on derived features to predict stock direction.
+5. Results and visualizations are rendered via React frontend.
+
+---
+
+## 🛠️ Setup Instructions
+
+## Backend Setup (Flask + ML)
+ 
+cd backend
+pip install -r requirements.txt
+python app.py
+
+Make sure you’re using Python 3.8+ and have virtualenv activated.
+
+## Frontend Setup (React)
+
+cd frontend
+npm install
+npm start
+
+📈 Future Improvements
+
+📌 Add multi-stock comparison
+🧾 Export results to PDF/CSV
+🔑 User login with dashboard
+📅 Custom intervals and notifications
+📉 Live data and price alerts
+
+📦 Requirements
+
+See the full list in requirements.txt. Key packages:
+Flask
+pandas
+numpy
+tensorflow
+scikit-learn
+yfinance
+
+🧑‍💻 Author
+
+Made with ❤️ by Sumandeep.
+
+
